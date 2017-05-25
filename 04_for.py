@@ -1,0 +1,6 @@
+# coding:shift-jis
+
+s=0
+for i in range(1,11): # 1~10Ç‹Ç≈åJÇËï‘Ç∑ÅD11Ç‹Ç≈Ç≈ÇÕÇ»Ç¢ÇÃÇ≈íçà”
+    s += i
+print(s)
