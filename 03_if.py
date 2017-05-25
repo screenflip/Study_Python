@@ -13,3 +13,12 @@ else:
 # インデントに注意
 # インデントの前には:を書く
 # else if の代わりに elif が使う
+
+if n==11:
+    print("n is",n)
+else:
+    print("n",'is','not',11)
+    print("n", 'is', n)
+
+if __name__=="__main__":
+    print("スクリプト時のみ")
