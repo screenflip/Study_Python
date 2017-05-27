@@ -1,0 +1,10 @@
+# coding:shift-jis
+
+str = input().strip()
+
+while str!="q":
+    if str=="":
+        str=input().strip()
+        continue
+    print(str,end="ƒf[ƒX\n")
+    str=input().strip()
