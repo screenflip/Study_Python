@@ -10,9 +10,6 @@ elif n % 5 == 0:
     print("Buzz")
 else:
     print(n)
-# インデントに注意
-# インデントの前には:を書く
-# else if の代わりに elif が使う
 
 if n==11:
     print("n is",n)
