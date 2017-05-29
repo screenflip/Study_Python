@@ -1,5 +1,6 @@
 #coding:shift-jis
 
+# 良いですね
 from isper import is_perfect
 
 def my_filter(rang,func):

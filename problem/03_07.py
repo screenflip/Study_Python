@@ -1,5 +1,6 @@
 #coding:shift-jis
 
+# 良いですね
 def add_n(n):
     def add_n_(a):
         return a+n

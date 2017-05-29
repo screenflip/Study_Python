@@ -19,6 +19,7 @@ def Goldbach(max_n=101, printer=print):
                 flag=False
                 break
             elif n<p**2:
+#               p_list.append(n) をここでしたら，フラグを立てなくてすみそう
                 break
         if flag==True:
             p_list.append(n)
@@ -34,11 +35,17 @@ def Goldbach(max_n=101, printer=print):
                 flag=True
                 break
             elif m>M:
+#               printer(n, '-', '-')
+#               f=False
+#               return False とやれば，フラグが全部いらなくなりそう
                 break
         if not flag:
             printer(n,'-','-')
             f=False
+#   return True
     return f
+
+# フラグを使うと，読みにくいコードができることが多いので，フラグを立てなくて済む方法がないか少し考える癖をつけるといいかもしれないです
 
 if __name__=="__main__":
     Goldbach()

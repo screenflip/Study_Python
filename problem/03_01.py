@@ -2,3 +2,5 @@
 
 print('"Yes", he said.')
 print("I don't know.")
+# Great!
+# "Isn't," she said. ‚Æ•\¦‚·‚é‚Ì‚à‚â‚Á‚Ä‚İ‚æ‚¤I
