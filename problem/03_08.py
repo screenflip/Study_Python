@@ -2,12 +2,13 @@
 
 def is_perfect(n):
 #   sum は組み込み関数なので(ry
-    sum=0
+    s=0
     for i in range(1,n+1):
         if n%i==0:
-            sum+=i
+            s+=i
 #   0は完全数じゃないから and n != 0 のほうが良いかも？
-    if sum==2*n or n==0:
+#   < ミスです
+    if s==2*n and n!=0:
         return True
     else:
         return False

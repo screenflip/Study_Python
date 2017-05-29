@@ -13,40 +13,30 @@ def Goldbach(max_n=101, printer=print):
     p_list=[]
 
     for n in range(3,max_n,2):
-        flag=True
         for p in p_list:
             if n%p==0:
-                flag=False
                 break
             elif n<p**2:
-#               p_list.append(n) をここでしたら，フラグを立てなくてすみそう
+                p_list.append(n)
                 break
-        if flag==True:
+#       p_listが最初は空で、ずっと空のままになるのでelseを付けました
+        else:
             p_list.append(n)
 
     f=True
 
     for n in range(6,max_n,2):
-        flag=False
         for m in p_list:
             M=n-m
             if M in p_list:
                 printer(n,m,M)
-                flag=True
                 break
             elif m>M:
-#               printer(n, '-', '-')
-#               f=False
-#               return False とやれば，フラグが全部いらなくなりそう
+                printer(n, '-', '-')
+                f=False
+#               ここでは、例外が見つかっても最後まで続けるようにしたかったので、fは残します
                 break
-        if not flag:
-            printer(n,'-','-')
-            f=False
-#   return True
     return f
-
-# フラグを使うと，読みにくいコードができることが多いので，フラグを立てなくて済む方法がないか少し考える癖をつけるといいかもしれないです
-# < はい、注意します
 
 if __name__=="__main__":
     Goldbach()
