@@ -10,6 +10,8 @@ def Goldbach(max_n=101, printer=print):
     if max_n<=6:
         return True
 
+#   < p_list=[2]
+#   < 最初に2を入れておけば，効率が落ちることもないし，4を特別扱いすることもないし，else も消せるかもです
     p_list=[]
 
     for n in range(3,max_n,2):
@@ -25,6 +27,8 @@ def Goldbach(max_n=101, printer=print):
 
     f=True
 
+#   < 4を付く別扱いしないので．
+#   < for n in range(4, max_n, 2):
     for n in range(6,max_n,2):
         for m in p_list:
             M=n-m
@@ -35,6 +39,7 @@ def Goldbach(max_n=101, printer=print):
                 printer(n, '-', '-')
                 f=False
 #               ここでは、例外が見つかっても最後まで続けるようにしたかったので、fは残します
+#               < なるほど，それならいいと思います
                 break
     return f
 
